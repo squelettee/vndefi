@@ -18,7 +18,7 @@ const translations = {
     badge: "Independent project",
     heroTitle: "Pay in Crypto When in Vietnam",
     heroDesc:
-      "A simple guide to paying Vietnamese shops with crypto — even when they don’t accept international cards. Built for tourists, digital nomads and expats.",
+      "A simple guide to paying Vietnamese shops with crypto. Built for tourists, digital nomads and expats.",
     ctaTry: "essayer l'app",
     ctaDownload: "Download Bitget App (iOS / Android)",
     ctaLearn: "Learn how to pay using Bitget",
@@ -81,7 +81,7 @@ const translations = {
     badge: "Projet indépendant",
     heroTitle: "Payez en crypto lors de votre séjour au Vietnam",
     heroDesc:
-      "Un guide simple pour payer les commerces vietnamiens en crypto — même s’ils n’acceptent pas les cartes internationales. Pensé pour les touristes, nomades et expatriés.",
+      "Un guide simple pour payer les commerces vietnamiens en crypto. Pensé pour les touristes, nomades et expatriés.",
     ctaTry: "essayer l'app",
     ctaDownload: "Télécharger l’app Bitget (iOS / Android)",
     ctaLearn: "Découvrir comment payer avec Bitget",
@@ -144,7 +144,7 @@ const translations = {
     badge: "Dự án độc lập",
     heroTitle: "Thanh toán bằng crypto khi ở Việt Nam",
     heroDesc:
-      "Hướng dẫn đơn giản để thanh toán tại cửa hàng Việt Nam bằng crypto — ngay cả khi họ không chấp nhận thẻ quốc tế. Dành cho khách du lịch, nomad và expat.",
+      "Hướng dẫn đơn giản để thanh toán tại cửa hàng Việt Nam bằng crypto. Dành cho khách du lịch, nomad và expat.",
     ctaTry: "essayer l'app",
     ctaDownload: "Tải ứng dụng Bitget (iOS / Android)",
     ctaLearn: "Tìm hiểu cách thanh toán với Bitget",
