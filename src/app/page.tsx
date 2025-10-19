@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Banknote, Globe, Info, QrCode, Timer, Wallet } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 
 const translations = {
   en: {
@@ -205,7 +205,21 @@ type Lang = keyof typeof translations
 
 export default function Home() {
   const [lang, setLang] = useState<Lang>("en")
+  const shopId = useMemo(() => {
+    if (typeof window === "undefined") return undefined
+    const url = new URL(window.location.href)
+    return url.searchParams.get("shopId") ?? undefined
+  }, [])
   const t = translations[lang]
+
+  useEffect(() => {
+    if (!shopId) return
+    fetch("/api/track", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ shopId, event: "page_view" }),
+    }).catch(() => { })
+  }, [shopId])
 
   return (
     <main className="font-sans">
@@ -252,6 +266,14 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
                 aria-label={t.appStore}
+                onClick={() => {
+                  if (!shopId) return
+                  fetch("/api/track", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ shopId, event: "click_app_store" }),
+                  }).catch(() => { })
+                }}
               >
                 <Image src="/apple-logo-svgrepo-com.svg" alt="Apple" width={16} height={16} className="dark:invert" /> {t.appStore}
               </Link>
@@ -261,6 +283,14 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
                 aria-label={t.googlePlay}
+                onClick={() => {
+                  if (!shopId) return
+                  fetch("/api/track", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ shopId, event: "click_google_play" }),
+                  }).catch(() => { })
+                }}
               >
                 <Image src="/play-store-svgrepo-com.svg" alt="Google Play" width={16} height={16} className="dark:invert" /> {t.googlePlay}
               </Link>
@@ -269,6 +299,14 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm underline underline-offset-4"
+                onClick={() => {
+                  if (!shopId) return
+                  fetch("/api/track", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ shopId, event: "click_learn_more" }),
+                  }).catch(() => { })
+                }}
               >
                 {t.learnMore}
               </Link>
@@ -440,6 +478,14 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
                   aria-label={t.appStore}
+                  onClick={() => {
+                    if (!shopId) return
+                    fetch("/api/track", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ shopId, event: "click_app_store" }),
+                    }).catch(() => { })
+                  }}
                 >
                   <Image src="/apple-logo-svgrepo-com.svg" alt="Apple" width={16} height={16} className="dark:invert" /> {t.appStore}
                 </Link>
@@ -449,6 +495,14 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors"
                   aria-label={t.googlePlay}
+                  onClick={() => {
+                    if (!shopId) return
+                    fetch("/api/track", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ shopId, event: "click_google_play" }),
+                    }).catch(() => { })
+                  }}
                 >
                   <Image src="/play-store-svgrepo-com.svg" alt="Google Play" width={16} height={16} className="dark:invert" /> {t.googlePlay}
                 </Link>
@@ -457,6 +511,14 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm underline underline-offset-4"
+                  onClick={() => {
+                    if (!shopId) return
+                    fetch("/api/track", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ shopId, event: "click_learn_more" }),
+                    }).catch(() => { })
+                  }}
                 >
                   {t.learnMore}
                 </Link>

@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model ShopStat {
+  shopId           String   @id
+  pageViews        Int      @default(0)
+  clicksAppStore   Int      @default(0)
+  clicksGooglePlay Int      @default(0)
+  clicksLearnMore  Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+

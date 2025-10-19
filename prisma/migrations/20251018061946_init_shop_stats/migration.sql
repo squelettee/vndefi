@@ -1,0 +1,10 @@
+-- CreateTable
+CREATE TABLE "ShopStat" (
+    "shopId" TEXT NOT NULL PRIMARY KEY,
+    "pageViews" INTEGER NOT NULL DEFAULT 0,
+    "clicksAppStore" INTEGER NOT NULL DEFAULT 0,
+    "clicksGooglePlay" INTEGER NOT NULL DEFAULT 0,
+    "clicksLearnMore" INTEGER NOT NULL DEFAULT 0,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL
+);
