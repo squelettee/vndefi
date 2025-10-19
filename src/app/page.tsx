@@ -4,7 +4,7 @@ import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Banknote, Globe, Info, QrCode, Timer, Wallet } from "lucide-react"
+import { Globe, Info, Timer, Wallet } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useMemo, useState } from "react"
@@ -29,7 +29,7 @@ const translations = {
     heroVideoTitle: "Add a demo video here",
     heroVideoSubtitle: "(QR scan + stablecoin payment)",
     b1Title: "Fast payments",
-    b1Desc: "Instant QR payments with automatic VND settlement.",
+    b1Desc: "Instant QR payments; supported wallets handle VND settlement.",
     b2Title: "Convenient everywhere",
     b2Desc: "Pay at local shops using bank QR, no international card needed.",
     b3Title: "No card limits",
@@ -39,14 +39,15 @@ const translations = {
     stepsTitle: "How it works",
     stepsDesc: "A quick overview of the flow.",
     stepLabel: "STEP",
-    s1Title: "Download the Bitget app",
+    solanaTip: "Tip: Use the Solana blockchain for near-zero fees and fast confirmations.",
+    s1Title: "Download a supported wallet (e.g., Bitget)",
     s1Desc: "Available on iOS and Android.",
     s2Title: "Your wallet is created",
     s2Desc: "Add crypto funds in seconds.",
     s3Title: "Scan a bank QR at checkout",
     s3Desc: "Most shops in Vietnam display bank QR codes.",
     s4Title: "Enter the amount due in VND",
-    s4Desc: "We auto-convert your crypto to VND.",
+    s4Desc: "Conversion to VND is handled by the supported wallet.",
     s5Title: "Choose your stablecoin",
     s5Desc: "Pay with the stablecoin you prefer.",
     s6Title: "Confirm and pay",
@@ -92,7 +93,7 @@ const translations = {
     heroVideoTitle: "Ajoutez ici une vidéo de démo",
     heroVideoSubtitle: "(scan QR + paiement en stablecoin)",
     b1Title: "Paiements rapides",
-    b1Desc: "Paiement QR instantané avec règlement automatique en VND.",
+    b1Desc: "Paiement QR instantané ; les wallets compatibles gèrent le règlement en VND.",
     b2Title: "Pratique partout",
     b2Desc: "Payez dans les commerces via QR bancaire, sans carte internationale.",
     b3Title: "Sans limites de carte",
@@ -102,14 +103,15 @@ const translations = {
     stepsTitle: "Comment ça marche",
     stepsDesc: "Un aperçu rapide du parcours.",
     stepLabel: "ÉTAPE",
-    s1Title: "Téléchargez l’app Bitget",
+    solanaTip: "Astuce : utilisez la blockchain Solana pour des frais quasi nuls et une validation rapide.",
+    s1Title: "Téléchargez un wallet compatible (ex. Bitget)",
     s1Desc: "Disponible sur iOS et Android.",
     s2Title: "Votre wallet est créé",
     s2Desc: "Ajoutez des fonds en crypto en quelques instants.",
     s3Title: "Scannez un QR bancaire au comptoir",
     s3Desc: "La plupart des commerces affichent des QR bancaires.",
     s4Title: "Entrez le montant dû en VND",
-    s4Desc: "Conversion automatique de vos cryptos en VND.",
+    s4Desc: "La conversion en VND est prise en charge par le wallet compatible.",
     s5Title: "Choisissez votre stablecoin",
     s5Desc: "Payez avec le stablecoin de votre choix.",
     s6Title: "Validez et payez",
@@ -155,7 +157,7 @@ const translations = {
     heroVideoTitle: "Thêm video demo tại đây",
     heroVideoSubtitle: "(Quét QR + thanh toán bằng stablecoin)",
     b1Title: "Thanh toán nhanh",
-    b1Desc: "QR tức thì với tất toán tự động bằng VND.",
+    b1Desc: "QR tức thì; ví được hỗ trợ xử lý tất toán VND.",
     b2Title: "Tiện lợi ở mọi nơi",
     b2Desc: "Trả tại cửa hàng bằng mã QR ngân hàng, không cần thẻ quốc tế.",
     b3Title: "Không giới hạn thẻ",
@@ -165,14 +167,15 @@ const translations = {
     stepsTitle: "Cách hoạt động",
     stepsDesc: "Tóm tắt nhanh quy trình.",
     stepLabel: "BƯỚC",
-    s1Title: "Tải ứng dụng Bitget",
+    solanaTip: "Gợi ý: dùng blockchain Solana để có phí gần như bằng 0 và xác nhận nhanh.",
+    s1Title: "Tải một ví được hỗ trợ (ví dụ Bitget)",
     s1Desc: "Có trên iOS và Android.",
     s2Title: "Ví của bạn được tạo",
     s2Desc: "Nạp crypto trong vài giây.",
     s3Title: "Quét mã QR ngân hàng khi thanh toán",
     s3Desc: "Hầu hết cửa hàng tại Việt Nam đều có mã QR ngân hàng.",
     s4Title: "Nhập số tiền VND cần trả",
-    s4Desc: "Tự động quy đổi crypto sang VND.",
+    s4Desc: "Việc quy đổi sang VND do ví hỗ trợ thực hiện.",
     s5Title: "Chọn stablecoin của bạn",
     s5Desc: "Thanh toán bằng stablecoin bạn thích.",
     s6Title: "Xác nhận và thanh toán",
@@ -313,14 +316,38 @@ export default function Home() {
             </div>
           </div>
           <div className="relative">
-            <AspectRatio ratio={16 / 9}>
-              <div className="h-full w-full rounded-xl border bg-muted/50 flex items-center justify-center">
-                <div className="text-center px-6">
-                  <p className="text-sm text-muted-foreground">{t.heroVideoTitle}</p>
-                  <p className="text-xs text-muted-foreground">{t.heroVideoSubtitle}</p>
+            {/* Mobile: 3/4 */}
+            <div className="sm:hidden">
+              <AspectRatio ratio={3 / 4}>
+                <div className="h-full w-full rounded-xl border bg-muted/50 flex items-center justify-center">
+                  <video
+                    className="h-full w-full rounded-xl object-cover"
+                    src="/video_demo.mp4"
+                    controls
+                    playsInline
+                    muted
+                    loop
+                    autoPlay
+                  />
                 </div>
-              </div>
-            </AspectRatio>
+              </AspectRatio>
+            </div>
+            {/* Desktop: 16/9 */}
+            <div className="hidden sm:block">
+              <AspectRatio ratio={16 / 9}>
+                <div className="h-full w-full rounded-xl border bg-muted/50 flex items-center justify-center">
+                  <video
+                    className="h-full w-full rounded-xl object-cover"
+                    src="/video_demo.mp4"
+                    controls
+                    playsInline
+                    muted
+                    loop
+                    autoPlay
+                  />
+                </div>
+              </AspectRatio>
+            </div>
           </div>
         </div>
       </section>
@@ -390,6 +417,10 @@ export default function Home() {
         <div className="mb-6 sm:mb-8">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">{t.stepsTitle}</h2>
           <p className="text-muted-foreground mt-2">{t.stepsDesc}</p>
+          <div className="mt-3 text-xs sm:text-sm inline-flex items-start gap-2 rounded-md border px-3 py-2 bg-muted/40">
+            <Info className="size-4 mt-0.5" />
+            <span>{t.solanaTip}</span>
+          </div>
         </div>
         <ol className="grid sm:grid-cols-3 gap-6">
           <li className="rounded-xl border p-5 sm:p-6">
@@ -434,32 +465,6 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
-      </section>
-
-      {/* Video placeholders */}
-      <section className="max-w-screen-xl mx-auto px-4 py-10 sm:py-14">
-        <div className="mb-6 sm:mb-8">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">{t.videoTitle}</h2>
-          <p className="text-muted-foreground mt-2">{t.videoDesc}</p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-6">
-          <AspectRatio ratio={16 / 9}>
-            <div className="h-full w-full rounded-xl border bg-muted/50 flex items-center justify-center">
-              <div className="text-center px-6">
-                <QrCode className="mx-auto mb-2 size-5 text-muted-foreground" />
-                <p className="text-sm text-muted-foreground">{t.video1}</p>
-              </div>
-            </div>
-          </AspectRatio>
-          <AspectRatio ratio={16 / 9}>
-            <div className="h-full w-full rounded-xl border bg-muted/50 flex items-center justify-center">
-              <div className="text-center px-6">
-                <Banknote className="mx-auto mb-2 size-5 text-muted-foreground" />
-                <p className="text-sm text-muted-foreground">{t.video2}</p>
-              </div>
-            </div>
-          </AspectRatio>
-        </div>
       </section>
 
       {/* Final CTA */}
