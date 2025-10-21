@@ -27,7 +27,10 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ ok: true })
   } catch (e) {
-    return NextResponse.json({ ok: false, error: "Server error" }, { status: 500 })
+    // Log the underlying error for debugging purposes
+    console.error("POST /api/track error", e)
+    const message = e instanceof Error ? e.message : "Server error"
+    return NextResponse.json({ ok: false, error: message }, { status: 500 })
   }
 }
 
