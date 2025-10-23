@@ -73,6 +73,7 @@ const translations = {
     privacy: "Privacy",
     terms: "Terms",
     support: "Support",
+    legal: "Legal",
   },
   fr: {
     language: "Langue",
@@ -137,6 +138,7 @@ const translations = {
     privacy: "Confidentialité",
     terms: "Conditions",
     support: "Support",
+    legal: "Mentions légales",
   },
   vi: {
     language: "Ngôn ngữ",
@@ -201,6 +203,7 @@ const translations = {
     privacy: "Bảo mật",
     terms: "Điều khoản",
     support: "Hỗ trợ",
+    legal: "Thông tin pháp lý",
   },
 } as const
 
@@ -542,10 +545,11 @@ export default function Home() {
               <div className="mt-2 text-xs max-w-3xl">{t.disclaimer}</div>
             </div>
             <div className="flex items-center gap-4 text-muted-foreground">
-              <Link href="#about" className="hover:text-foreground transition-colors">{t.about}</Link>
-              <Link href="#privacy" className="hover:text-foreground transition-colors">{t.privacy}</Link>
-              <Link href="#terms" className="hover:text-foreground transition-colors">{t.terms}</Link>
-              <Link href="#support" className="hover:text-foreground transition-colors">{t.support}</Link>
+              <Link href={`/about?lang=${lang}`} className="hover:text-foreground transition-colors">{t.about}</Link>
+              <Link href={`/privacy?lang=${lang}`} className="hover:text-foreground transition-colors">{t.privacy}</Link>
+              <Link href={`/terms?lang=${lang}`} className="hover:text-foreground transition-colors">{t.terms}</Link>
+              <Link href={`/support?lang=${lang}`} className="hover:text-foreground transition-colors">{t.support}</Link>
+              <Link href={`/mentions-legales?lang=${lang}`} className="hover:text-foreground transition-colors">{t.legal}</Link>
             </div>
           </div>
         </div>
