@@ -42,8 +42,8 @@ const copy: Record<string, { title: string; body: string[]; back: string }> = {
   },
 };
 
-export default async function AboutPage({ searchParams }: { searchParams?: { [key: string]: string | string[] | undefined } }) {
-  const raw = await (searchParams?.lang ?? "en");
+export default function AboutPage({ searchParams }: { searchParams?: { [key: string]: string | string[] | undefined } }) {
+  const raw = searchParams?.lang ?? "fr";
   const lang = (Array.isArray(raw) ? raw[0] : raw) as "fr" | "en" | "vi";
   const t = copy[lang] ?? copy.fr;
 
