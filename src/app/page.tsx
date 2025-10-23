@@ -64,7 +64,7 @@ const translations = {
       "Get set up in minutes and start paying Vietnamese shops with crypto.",
     footerTagline: "Independent guide to paying with crypto in Vietnam",
     disclaimer:
-      "This website is an independent educational resource. We are not affiliated with or endorsed by any exchange or financial institution.",
+      "Disclaimer: VNDeFi is an independent informational platform. We are not affiliated with or endorsed by any exchange, wallet provider, or financial institution. We do not offer financial, legal, or investment advice, and are not a licensed payment service. Use of cryptocurrency involves risks, and users are responsible for ensuring compliance with local laws and regulations.",
     whyTitle: "Why Pay in Crypto in Vietnam?",
     whyB1: "Many local shops don’t accept international cards.",
     whyB2: "Crypto payments work instantly and locally.",
@@ -129,7 +129,7 @@ const translations = {
       "Installez-vous en quelques minutes et payez les commerces vietnamiens en crypto.",
     footerTagline: "Guide indépendant pour payer en crypto au Vietnam",
     disclaimer:
-      "Ce site est une ressource éducative indépendante. Nous ne sommes affiliés ni approuvés par aucune plateforme ou institution financière.",
+      "Clause de non-responsabilité : VNDeFi est une plateforme d'information indépendante. Nous ne sommes affiliés ni approuvés par aucune plateforme d'échange, fournisseur de wallet ou institution financière. Nous ne proposons aucun conseil financier, juridique ou en investissement et ne sommes pas un prestataire de services de paiement agréé. L'utilisation des crypto‑monnaies comporte des risques et il appartient aux utilisateurs de s'assurer du respect des lois et réglementations locales.",
     whyTitle: "Pourquoi payer en crypto au Vietnam ?",
     whyB1: "Beaucoup de commerces n’acceptent pas les cartes internationales.",
     whyB2: "Les paiements crypto sont instantanés et locaux.",
@@ -194,7 +194,7 @@ const translations = {
       "Thiết lập trong vài phút và bắt đầu thanh toán cửa hàng Việt Nam bằng crypto.",
     footerTagline: "Hướng dẫn độc lập thanh toán crypto tại Việt Nam",
     disclaimer:
-      "Trang web này là tài nguyên giáo dục độc lập. Chúng tôi không liên kết hay được bảo trợ bởi bất kỳ sàn hay tổ chức tài chính nào.",
+      "Miễn trừ trách nhiệm: VNDeFi là nền tảng thông tin độc lập. Chúng tôi không liên kết hoặc được bảo trợ bởi bất kỳ sàn giao dịch, nhà cung cấp ví hoặc tổ chức tài chính nào. Chúng tôi không cung cấp tư vấn tài chính, pháp lý hoặc đầu tư và không phải là đơn vị cung cấp dịch vụ thanh toán được cấp phép. Việc sử dụng tiền mã hoá tiềm ẩn rủi ro; người dùng tự chịu trách nhiệm tuân thủ luật pháp và quy định địa phương.",
     whyTitle: "Vì sao trả bằng crypto tại Việt Nam?",
     whyB1: "Nhiều cửa hàng không chấp nhận thẻ quốc tế.",
     whyB2: "Thanh toán crypto diễn ra tức thì và nội địa.",
