@@ -36,25 +36,23 @@ const translations = {
     b3Desc: "Avoid foreign card limits and declines while traveling.",
     b4Title: "Seamless with Bitget",
     b4Desc: "Designed to broaden wallet support as the ecosystem grows.",
-    stepsTitle: "How it works",
-    stepsDesc: "A quick overview of the flow.",
+    stepsTitle: "How It Works",
+    stepsDesc: "A quick overview of the flow",
     stepLabel: "STEP",
     solanaTip: "Tip: Use the Solana blockchain for near-zero fees and fast confirmations.",
-    s1Title: "Download a supported wallet (e.g., Bitget)",
-    s1Desc: "Available on iOS and Android.",
-    s2Title: "Your wallet is created",
+    s1Title: "Download a crypto wallet.",
+    s1Desc: "(e.g., Bitget Wallet — available on iOS and Android).",
+    s2Title: "Your wallet is created.",
     s2Desc: "Add crypto funds in seconds.",
-    s3Title: "Scan a bank QR at checkout",
+    s3Title: "Scan a bank QR at checkout.",
     s3Desc: "Most shops in Vietnam display bank QR codes.",
-    s4Title: "Enter the amount due in VND",
+    s4Title: "Enter the amount due in VND.",
     s4Desc: "Conversion to VND is handled by the supported wallet.",
-    s5Title: "Choose your stablecoin",
+    s5Title: "Choose your stablecoin (e.g., USDC).",
     s5Desc: "Pay with the stablecoin you prefer.",
-    s6Title: "Confirm and pay",
+    s6Title: "Confirm and pay.",
     s6Desc: "The merchant receives a local VND transfer.",
     noteTitle: "Neutral note",
-    noteDesc:
-      "Some wallets, like Bitget, already support instant crypto‑to‑VND transfers directly to Vietnamese bank accounts. We do not represent or promote any company.",
     videoTitle: "Video demos",
     videoDesc: "Insert videos here to showcase the user journey.",
     video1: "In-store QR scan",
@@ -101,25 +99,23 @@ const translations = {
     b3Desc: "Évitez les plafonds et refus de cartes à l’étranger.",
     b4Title: "Intégration fluide avec Bitget",
     b4Desc: "Pensé pour élargir le support d’autres wallets au fil du temps.",
-    stepsTitle: "Comment ça marche",
-    stepsDesc: "Un aperçu rapide du parcours.",
+    stepsTitle: "Comment Ça Marche",
+    stepsDesc: "Un aperçu rapide du parcours",
     stepLabel: "ÉTAPE",
     solanaTip: "Astuce : utilisez la blockchain Solana pour des frais quasi nuls et une validation rapide.",
-    s1Title: "Téléchargez un wallet compatible (ex. Bitget)",
-    s1Desc: "Disponible sur iOS et Android.",
-    s2Title: "Votre wallet est créé",
+    s1Title: "Téléchargez un crypto wallet.",
+    s1Desc: "(ex. Bitget Wallet — disponible sur iOS et Android).",
+    s2Title: "Votre wallet est créé.",
     s2Desc: "Ajoutez des fonds en crypto en quelques instants.",
-    s3Title: "Scannez un QR bancaire au comptoir",
+    s3Title: "Scannez un QR bancaire au comptoir.",
     s3Desc: "La plupart des commerces affichent des QR bancaires.",
-    s4Title: "Entrez le montant dû en VND",
+    s4Title: "Entrez le montant dû en VND.",
     s4Desc: "La conversion en VND est prise en charge par le wallet compatible.",
-    s5Title: "Choisissez votre stablecoin",
+    s5Title: "Choisissez votre stablecoin (ex. USDC).",
     s5Desc: "Payez avec le stablecoin de votre choix.",
-    s6Title: "Validez et payez",
+    s6Title: "Validez et payez.",
     s6Desc: "Le commerçant reçoit un virement local en VND.",
     noteTitle: "Note neutre",
-    noteDesc:
-      "Certains wallets, comme Bitget, prennent déjà en charge les virements instantanés crypto‑vers‑VND vers des comptes bancaires vietnamiens. Nous ne représentons ni ne promouvons aucune entreprise.",
     videoTitle: "Démonstrations vidéo",
     videoDesc: "Ajoutez des vidéos pour montrer le parcours utilisateur.",
     video1: "Scan du QR en magasin",
@@ -166,25 +162,23 @@ const translations = {
     b3Desc: "Tránh giới hạn và từ chối thẻ khi đi du lịch.",
     b4Title: "Trải nghiệm mượt mà với Bitget",
     b4Desc: "Hướng tới hỗ trợ thêm nhiều ví khi hệ sinh thái phát triển.",
-    stepsTitle: "Cách hoạt động",
-    stepsDesc: "Tóm tắt nhanh quy trình.",
+    stepsTitle: "Cách Hoạt Động",
+    stepsDesc: "Tóm tắt nhanh quy trình",
     stepLabel: "BƯỚC",
     solanaTip: "Gợi ý: dùng blockchain Solana để có phí gần như bằng 0 và xác nhận nhanh.",
-    s1Title: "Tải một ví được hỗ trợ (ví dụ Bitget)",
-    s1Desc: "Có trên iOS và Android.",
-    s2Title: "Ví của bạn được tạo",
+    s1Title: "Tải một ví crypto.",
+    s1Desc: "(ví dụ Bitget Wallet — có trên iOS và Android).",
+    s2Title: "Ví của bạn được tạo.",
     s2Desc: "Nạp crypto trong vài giây.",
-    s3Title: "Quét mã QR ngân hàng khi thanh toán",
+    s3Title: "Quét mã QR ngân hàng khi thanh toán.",
     s3Desc: "Hầu hết cửa hàng tại Việt Nam đều có mã QR ngân hàng.",
-    s4Title: "Nhập số tiền VND cần trả",
+    s4Title: "Nhập số tiền VND cần trả.",
     s4Desc: "Việc quy đổi sang VND do ví hỗ trợ thực hiện.",
-    s5Title: "Chọn stablecoin của bạn",
+    s5Title: "Chọn stablecoin của bạn (ví dụ USDC).",
     s5Desc: "Thanh toán bằng stablecoin bạn thích.",
-    s6Title: "Xác nhận và thanh toán",
+    s6Title: "Xác nhận và thanh toán.",
     s6Desc: "Người bán nhận chuyển khoản VND nội địa.",
     noteTitle: "Ghi chú trung lập",
-    noteDesc:
-      "Một số ví, như Bitget, đã hỗ trợ chuyển đổi crypto‑sang‑VND tức thì trực tiếp vào tài khoản ngân hàng Việt Nam. Chúng tôi không đại diện hay quảng bá bất kỳ công ty nào.",
     videoTitle: "Video demo",
     videoDesc: "Thêm video để minh hoạ hành trình người dùng.",
     video1: "Quét QR tại cửa hàng",
@@ -457,17 +451,6 @@ export default function Home() {
             <div className="text-muted-foreground text-sm mt-1">{t.s6Desc}</div>
           </li>
         </ol>
-        {/* Neutral informational note */}
-        <Card className="mt-6">
-          <CardContent className="py-6">
-            <div className="flex items-start gap-3">
-              <Info className="size-5 text-muted-foreground mt-0.5" />
-              <div>
-                <div className="text-muted-foreground text-sm">{t.noteDesc}</div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
       </section>
 
       {/* Final CTA */}
