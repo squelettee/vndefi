@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy / Confidentialité",
-  description: "Privacy statement for VNDefi.",
+  description: "Privacy statement for VNDeFi.",
 };
 
 const copy: Record<string, { title: string; body: string[]; back: string }> = {

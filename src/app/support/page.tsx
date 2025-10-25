@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Support",
-  description: "Support for VNDefi",
+  description: "Support for VNDeFi",
 };
 
 const copy: Record<string, { title: string; body: string[]; back: string }> = {

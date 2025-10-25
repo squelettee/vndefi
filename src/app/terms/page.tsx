@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms / Conditions",
-  description: "Terms for VNDefi",
+  description: "Terms for VNDeFi",
 };
 
 const copy: Record<string, { title: string; body: string[]; back: string }> = {
@@ -11,7 +11,7 @@ const copy: Record<string, { title: string; body: string[]; back: string }> = {
     title: "Conditions d’utilisation",
     body: [
       "Ce site est fourni à titre informatif et éducatif. Il ne constitue pas un conseil financier, juridique ou professionnel.",
-      "VNDefi est un projet indépendant et n’est affilié ni approuvé par aucune entreprise ou institution mentionnée.",
+      "VNDeFi est un projet indépendant et n’est affilié ni approuvé par aucune entreprise ou institution mentionnée.",
       "Les contenus et liens externes (ex. App Store, Google Play, documentation officielle) sont fournis à titre indicatif et n’impliquent aucune approbation.",
       "Le site est fourni sans garantie d’exactitude, de disponibilité ou d’adéquation à un usage particulier.",
       "Dans la mesure permise par la loi, aucune responsabilité ne saurait être engagée pour tout dommage direct, indirect, accessoire, ou consécutif lié à l’utilisation des informations présentées.",
@@ -22,7 +22,7 @@ const copy: Record<string, { title: string; body: string[]; back: string }> = {
     title: "Terms of Use",
     body: [
       "This site is provided for informational and educational purposes only. It does not constitute financial, legal, or professional advice.",
-      "VNDefi is an independent project and is not affiliated with or endorsed by any mentioned company or institution.",
+      "VNDeFi is an independent project and is not affiliated with or endorsed by any mentioned company or institution.",
       "Content and external links (e.g., App Store, Google Play, official documentation) are provided for convenience and do not imply endorsement.",
       "The site is provided without warranties of accuracy, availability, or fitness for a particular purpose.",
       "To the extent permitted by law, no liability is assumed for any direct, indirect, incidental, or consequential damages arising from the use of the information provided.",
@@ -33,7 +33,7 @@ const copy: Record<string, { title: string; body: string[]; back: string }> = {
     title: "Điều khoản sử dụng",
     body: [
       "Trang web này chỉ nhằm mục đích cung cấp thông tin và giáo dục; không phải là tư vấn tài chính, pháp lý hay chuyên môn.",
-      "VNDefi là dự án độc lập, không liên kết và không được bảo trợ bởi bất kỳ công ty hay tổ chức nào được nhắc đến.",
+      "VNDeFi là dự án độc lập, không liên kết và không được bảo trợ bởi bất kỳ công ty hay tổ chức nào được nhắc đến.",
       "Nội dung và liên kết bên ngoài (ví dụ App Store, Google Play, tài liệu chính thức) chỉ để tham khảo và không ngụ ý sự bảo chứng.",
       "Trang web được cung cấp mà không có bảo đảm về độ chính xác, tính sẵn sàng hay phù hợp cho mục đích cụ thể.",
       "Trong phạm vi pháp luật cho phép, chúng tôi không chịu trách nhiệm cho mọi thiệt hại trực tiếp, gián tiếp, ngẫu nhiên hoặc hệ quả phát sinh từ việc sử dụng thông tin trên trang.",

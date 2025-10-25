@@ -15,12 +15,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "VNDefi",
-    template: "%s | VNDefi",
+    default: "VNDeFi",
+    template: "%s | VNDeFi",
   },
   description:
     "A simple guide to paying Vietnamese shops with crypto. Built for tourists, digital nomads and expats.",
-  keywords: ["VNDefi", "crypto", "payments", "Vietnam", "guide", "tracking"],
+  keywords: ["VNDeFi", "crypto", "payments", "Vietnam", "guide", "tracking"],
   icons: {
     icon: [
       { url: "/vietnam.png", rel: "icon", type: "image/png", sizes: "32x32" },

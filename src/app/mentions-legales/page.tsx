@@ -5,7 +5,7 @@ import { MentionsContent } from "./sections";
 export const metadata: Metadata = {
   title: "Mentions légales",
   description:
-    "Mentions légales de VNDefi.asia – projet pilote indépendant initié par Baptiste Gresse pour évaluer l'adoption des paiements crypto au Vietnam.",
+    "Mentions légales de VNDeFi.asia – projet pilote indépendant initié par Baptiste Gresse pour évaluer l'adoption des paiements crypto au Vietnam.",
   robots: { index: true, follow: true },
 };
 

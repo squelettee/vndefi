@@ -22,7 +22,7 @@ const translations = {
     ctaTry: "essayer l'app",
     ctaDownload: "Download Bitget App (iOS / Android)",
     ctaLearn: "Learn how to pay using Bitget",
-    brandBy: "by VNDefi",
+    brandBy: "by VNDeFi",
     appStore: "App Store",
     googlePlay: "Google Play",
     learnMore: "Learn more",
@@ -69,7 +69,7 @@ const translations = {
     whyB1: "Many local shops don’t accept international cards.",
     whyB2: "Crypto payments work instantly and locally.",
     whyB3: "No hidden fees or conversion surprises.",
-    about: "About VNDefi",
+    about: "About VNDeFi",
     privacy: "Privacy",
     terms: "Terms",
     support: "Support",
@@ -87,7 +87,7 @@ const translations = {
     ctaTry: "essayer l'app",
     ctaDownload: "Télécharger l’app Bitget (iOS / Android)",
     ctaLearn: "Découvrir comment payer avec Bitget",
-    brandBy: "par VNDefi",
+    brandBy: "par VNDeFi",
     appStore: "App Store",
     googlePlay: "Google Play",
     learnMore: "En savoir plus",
@@ -134,7 +134,7 @@ const translations = {
     whyB1: "Beaucoup de commerces n’acceptent pas les cartes internationales.",
     whyB2: "Les paiements crypto sont instantanés et locaux.",
     whyB3: "Pas de frais cachés ni de surprises de conversion.",
-    about: "À propos de VNDefi",
+    about: "À propos de VNDeFi",
     privacy: "Confidentialité",
     terms: "Conditions",
     support: "Support",
@@ -152,7 +152,7 @@ const translations = {
     ctaTry: "essayer l'app",
     ctaDownload: "Tải ứng dụng Bitget (iOS / Android)",
     ctaLearn: "Tìm hiểu cách thanh toán với Bitget",
-    brandBy: "bởi VNDefi",
+    brandBy: "bởi VNDeFi",
     appStore: "App Store",
     googlePlay: "Google Play",
     learnMore: "Tìm hiểu thêm",
@@ -199,7 +199,7 @@ const translations = {
     whyB1: "Nhiều cửa hàng không chấp nhận thẻ quốc tế.",
     whyB2: "Thanh toán crypto diễn ra tức thì và nội địa.",
     whyB3: "Không phí ẩn hay bất ngờ khi quy đổi.",
-    about: "Giới thiệu VNDefi",
+    about: "Giới thiệu VNDeFi",
     privacy: "Bảo mật",
     terms: "Điều khoản",
     support: "Hỗ trợ",
@@ -233,7 +233,7 @@ export default function Home() {
       <div className="max-w-screen-xl mx-auto px-4 pt-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2 font-medium">
-            <span>VNDefi</span>
+            <span>VNDeFi</span>
           </div>
           <div className="flex items-center gap-2">
             <AnimatedThemeToggler />
@@ -541,7 +541,7 @@ export default function Home() {
         <div className="max-w-screen-xl mx-auto px-4 py-8 sm:py-10">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
             <div className="text-center sm:text-left text-muted-foreground">
-              © {new Date().getFullYear()} VNDefi — {t.footerTagline}
+              © {new Date().getFullYear()} VNDeFi — {t.footerTagline}
               <div className="mt-2 text-xs max-w-3xl">{t.disclaimer}</div>
             </div>
             <div className="flex items-center gap-4 text-muted-foreground">

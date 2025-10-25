@@ -13,13 +13,13 @@ const content: Record<Lang, { title: string; updated: string; blocks: Array<{ h:
     blocks: [
       {
         h: "Éditeur du site", p: [
-          "Le site VNDefi.asia est un projet indépendant en développement, initié et édité par Baptiste Gresse, développeur web freelance.",
+          "Le site VNDeFi.asia est un projet indépendant en développement, initié et édité par Baptiste Gresse, développeur web freelance.",
           "Adresse e‑mail : contact@vndefi.asia",
         ]
       },
       {
         h: "Statut", p: [
-          "VNDefi n’est pas encore constitué en société. Il s’agit d’un projet personnel de recherche et de développement visant à explorer les solutions de paiement en crypto‑monnaie au Vietnam.",
+          "VNDeFi n’est pas encore constitué en société. Il s’agit d’un projet personnel de recherche et de développement visant à explorer les solutions de paiement en crypto‑monnaie au Vietnam.",
         ]
       },
       {
@@ -44,7 +44,7 @@ const content: Record<Lang, { title: string; updated: string; blocks: Array<{ h:
       },
       {
         h: "Responsabilité", p: [
-          "Le site VNDefi.asia a pour unique objectif de fournir des informations éducatives sur les paiements en crypto‑monnaie au Vietnam. Il ne constitue ni un service financier, ni une plateforme d’échange, ni une entreprise liée à une entité financière. VNDefi n’est ni affilié, ni approuvé par Bitget ou toute autre société mentionnée. Les informations présentées sont fournies à titre indicatif et peuvent être modifiées à tout moment.",
+          "Le site VNDeFi.asia a pour unique objectif de fournir des informations éducatives sur les paiements en crypto‑monnaie au Vietnam. Il ne constitue ni un service financier, ni une plateforme d’échange, ni une entreprise liée à une entité financière. VNDeFi n’est ni affilié, ni approuvé par Bitget ou toute autre société mentionnée. Les informations présentées sont fournies à titre indicatif et peuvent être modifiées à tout moment.",
         ]
       },
       {
@@ -71,13 +71,13 @@ const content: Record<Lang, { title: string; updated: string; blocks: Array<{ h:
     blocks: [
       {
         h: "Publisher", p: [
-          "VNDefi.asia is an independent project in development, initiated and published by Baptiste Gresse, a freelance web developer.",
+          "VNDeFi.asia is an independent project in development, initiated and published by Baptiste Gresse, a freelance web developer.",
           "Email address: contact@vndefi.asia",
         ]
       },
       {
         h: "Status", p: [
-          "VNDefi is not yet incorporated as a company. It is a personal R&D project exploring crypto payment solutions in Vietnam.",
+          "VNDeFi is not yet incorporated as a company. It is a personal R&D project exploring crypto payment solutions in Vietnam.",
         ]
       },
       {
@@ -102,7 +102,7 @@ const content: Record<Lang, { title: string; updated: string; blocks: Array<{ h:
       },
       {
         h: "Liability", p: [
-          "VNDefi.asia provides educational information about crypto payments in Vietnam. It is not a financial service, an exchange platform, or a company affiliated with any financial entity. VNDefi is neither affiliated with nor endorsed by Bitget or any other mentioned company. Information is provided for guidance only and may change at any time.",
+          "VNDeFi.asia provides educational information about crypto payments in Vietnam. It is not a financial service, an exchange platform, or a company affiliated with any financial entity. VNDeFi is neither affiliated with nor endorsed by Bitget or any other mentioned company. Information is provided for guidance only and may change at any time.",
         ]
       },
       {
@@ -129,13 +129,13 @@ const content: Record<Lang, { title: string; updated: string; blocks: Array<{ h:
     blocks: [
       {
         h: "Nhà xuất bản", p: [
-          "VNDefi.asia là dự án độc lập đang phát triển, được khởi xướng và xuất bản bởi Baptiste Gresse, lập trình viên web tự do.",
+          "VNDeFi.asia là dự án độc lập đang phát triển, được khởi xướng và xuất bản bởi Baptiste Gresse, lập trình viên web tự do.",
           "Email: contact@vndefi.asia",
         ]
       },
       {
         h: "Trạng thái", p: [
-          "VNDefi hiện chưa thành lập công ty. Đây là dự án nghiên cứu & phát triển cá nhân nhằm khám phá giải pháp thanh toán bằng crypto tại Việt Nam.",
+          "VNDeFi hiện chưa thành lập công ty. Đây là dự án nghiên cứu & phát triển cá nhân nhằm khám phá giải pháp thanh toán bằng crypto tại Việt Nam.",
         ]
       },
       {
@@ -160,7 +160,7 @@ const content: Record<Lang, { title: string; updated: string; blocks: Array<{ h:
       },
       {
         h: "Trách nhiệm", p: [
-          "VNDefi.asia chỉ cung cấp thông tin giáo dục về thanh toán crypto tại Việt Nam. Đây không phải dịch vụ tài chính, sàn giao dịch hay công ty liên kết với bất kỳ tổ chức tài chính nào. VNDefi không liên kết hoặc được bảo trợ bởi Bitget hay bất kỳ công ty nào được nhắc đến. Thông tin chỉ mang tính tham khảo và có thể thay đổi bất cứ lúc nào.",
+          "VNDeFi.asia chỉ cung cấp thông tin giáo dục về thanh toán crypto tại Việt Nam. Đây không phải dịch vụ tài chính, sàn giao dịch hay công ty liên kết với bất kỳ tổ chức tài chính nào. VNDeFi không liên kết hoặc được bảo trợ bởi Bitget hay bất kỳ công ty nào được nhắc đến. Thông tin chỉ mang tính tham khảo và có thể thay đổi bất cứ lúc nào.",
         ]
       },
       {
