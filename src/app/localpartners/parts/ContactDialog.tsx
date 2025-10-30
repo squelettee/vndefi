@@ -3,25 +3,36 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { useCallback, useMemo, useState } from "react";
 
 export function ContactDialog({
   triggerLabel,
+  title,
   note,
   consentLabel,
   submitLabel,
   companyLabel,
+  addressLabel,
+  emailLabel,
+  whatsappLabel,
   toEmail = "contact@vndefi.asia",
 }: {
   triggerLabel: string;
+  title?: string;
   note: string;
   consentLabel: string;
   submitLabel: string;
   companyLabel: string;
+  addressLabel?: string;
+  emailLabel?: string;
+  whatsappLabel?: string;
   toEmail?: string;
 }) {
   const [open, setOpen] = useState(false);
   const [company, setCompany] = useState("");
+  const [address, setAddress] = useState("");
   const [email, setEmail] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [consent, setConsent] = useState(false);
@@ -36,6 +47,7 @@ export function ContactDialog({
       ``,
       `I confirm I accept receiving the QR flyer and wish to join the program.`,
       `Business name: ${company}`,
+      address ? `Business address: ${address}` : undefined,
       `Email: ${email}`,
       whatsapp ? `WhatsApp: ${whatsapp}` : undefined,
     ].filter(Boolean).join("%0D%0A");
@@ -48,13 +60,13 @@ export function ContactDialog({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <button className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-primary-foreground hover:opacity-90 transition">
+        <Button>
           {triggerLabel}
-        </button>
+        </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>{triggerLabel}</DialogTitle>
+          <DialogTitle>{title ?? triggerLabel}</DialogTitle>
         </DialogHeader>
         <div className="space-y-4">
           <div className="grid gap-2">
@@ -62,27 +74,26 @@ export function ContactDialog({
             <Input id="dlg-company" type="text" placeholder="Mon Café" value={company} onChange={(e) => setCompany(e.target.value)} />
           </div>
           <div className="grid gap-2">
-            <Label htmlFor="dlg-email">Email</Label>
+            <Label htmlFor="dlg-address">{addressLabel ?? "Business Address"}</Label>
+            <Input id="dlg-address" type="text" placeholder="123 Lê Lợi, Đà Nẵng" value={address} onChange={(e) => setAddress(e.target.value)} />
+          </div>
+          <div className="grid gap-2">
+            <Label htmlFor="dlg-email">{emailLabel ?? "Email"}</Label>
             <Input id="dlg-email" type="email" inputMode="email" placeholder="name@example.com" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
           <div className="grid gap-2">
-            <Label htmlFor="dlg-wa">WhatsApp (optionnel)</Label>
+            <Label htmlFor="dlg-wa">{whatsappLabel ?? "WhatsApp / Zalo (optional)"}</Label>
             <Input id="dlg-wa" type="tel" inputMode="tel" placeholder="+84 ..." value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)} />
           </div>
           <div className="flex items-center gap-2">
-            <input id="dlg-consent" type="checkbox" className="h-4 w-4" checked={consent} onChange={(e) => setConsent(e.target.checked)} />
+            <Checkbox id="dlg-consent" checked={consent} onCheckedChange={(v) => setConsent(Boolean(v))} />
             <Label htmlFor="dlg-consent" className="text-sm">{consentLabel}</Label>
           </div>
           <p className="text-xs text-muted-foreground">{note}</p>
           <div>
-            <button
-              type="button"
-              onClick={onSubmit}
-              disabled={!isValid}
-              className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-primary-foreground hover:opacity-90 transition disabled:opacity-60"
-            >
+            <Button type="button" onClick={onSubmit} disabled={!isValid}>
               {submitLabel}
-            </button>
+            </Button>
           </div>
         </div>
       </DialogContent>
