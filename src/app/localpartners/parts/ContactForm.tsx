@@ -14,7 +14,7 @@ export function ContactForm({
   whatsappLabel,
   note,
   submitLabel,
-  toEmail = "contact@vndefi.asia",
+  toEmail = "baptiste.gresse@proton.me",
 }: {
   shopId?: string;
   shopName?: string;
@@ -37,11 +37,13 @@ export function ContactForm({
           headers: { "content-type": "application/json" },
           body: JSON.stringify({ shopId, event: "click_learn_more" }),
           keepalive: true,
-        }).catch(() => { });
-      } catch { }
+        }).catch(() => {});
+      } catch {}
     }
 
-    const subject = encodeURIComponent(`[Partner Contact] ${shopName ?? shopId ?? "New partner"}`);
+    const subject = encodeURIComponent(
+      `[Partner Contact] ${shopName ?? shopId ?? "New partner"}`
+    );
     const lines = [
       `Hello,`,
       ``,
@@ -53,7 +55,9 @@ export function ContactForm({
       `Preferred language: ${lang.toUpperCase()}`,
       ``,
       `Please keep me updated each quarter: number of affiliated users and potential cashout.`,
-    ].filter(Boolean).join("%0D%0A");
+    ]
+      .filter(Boolean)
+      .join("%0D%0A");
 
     const href = `mailto:${toEmail}?subject=${subject}&body=${lines}`;
     window.location.href = href;
@@ -63,15 +67,33 @@ export function ContactForm({
     <div className="space-y-3">
       <div className="grid gap-2">
         <Label htmlFor="partner-email">{emailLabel}</Label>
-        <Input id="partner-email" type="email" inputMode="email" placeholder="name@example.com" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <Input
+          id="partner-email"
+          type="email"
+          inputMode="email"
+          placeholder="name@example.com"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
       </div>
       <div className="grid gap-2">
         <Label htmlFor="partner-wa">{whatsappLabel}</Label>
-        <Input id="partner-wa" type="tel" inputMode="tel" placeholder="+84 ..." value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)} />
+        <Input
+          id="partner-wa"
+          type="tel"
+          inputMode="tel"
+          placeholder="+84 ..."
+          value={whatsapp}
+          onChange={(e) => setWhatsapp(e.target.value)}
+        />
       </div>
       <p className="text-xs text-muted-foreground">{note}</p>
       <div>
-        <button type="button" onClick={onSubmit} className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-primary-foreground hover:opacity-90 transition">
+        <button
+          type="button"
+          onClick={onSubmit}
+          className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-primary-foreground hover:opacity-90 transition"
+        >
           {submitLabel}
         </button>
       </div>

@@ -3,7 +3,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms & Legal",
-  description: "Terms, disclaimer, risk notice, privacy, and contact for VNDeFi.",
+  description:
+    "Terms, disclaimer, risk notice, privacy, and contact for VNDeFi.",
 };
 
 const copy: Record<string, { title: string; body: string[]; back: string }> = {
@@ -34,7 +35,7 @@ const copy: Record<string, { title: string; body: string[]; back: string }> = {
       "We do not require signups, logins, or payment details. Basic, anonymous analytics (such as website traffic) may be used to improve content and site performance, but no identifiable information is tracked or stored.",
       "---",
       "5. Contact",
-      "If you have questions about these terms or anything on the site, you can reach us at contact@vndefi.asia.",
+      "If you have questions about these terms or anything on the site, you can reach us at baptiste.gresse@proton.me.",
     ],
     back: "← Back to home",
   },
@@ -65,7 +66,7 @@ const copy: Record<string, { title: string; body: string[]; back: string }> = {
       "Aucune inscription/connexion ni données de paiement ne sont requises. Des statistiques anonymes (trafic) peuvent être utilisées pour améliorer le site, sans collecte de données identifiantes.",
       "---",
       "5. Contact",
-      "Pour toute question sur ces conditions, contactez-nous à contact@vndefi.asia.",
+      "Pour toute question sur ces conditions, contactez-nous à baptiste.gresse@proton.me.",
     ],
     back: "← Retour à l’accueil",
   },
@@ -96,25 +97,45 @@ const copy: Record<string, { title: string; body: string[]; back: string }> = {
       "Chúng tôi không yêu cầu đăng ký/đăng nhập hay thông tin thanh toán. Có thể dùng thống kê ẩn danh (lưu lượng truy cập) để cải thiện nội dung & hiệu năng, nhưng không lưu dữ liệu nhận dạng.",
       "---",
       "5. Liên hệ",
-      "Nếu có câu hỏi về điều khoản, hãy liên hệ: contact@vndefi.asia.",
+      "Nếu có câu hỏi về điều khoản, hãy liên hệ: baptiste.gresse@proton.me.",
     ],
     back: "← Quay về trang chủ",
   },
 };
 
-export default function TermsPage({ searchParams }: { searchParams?: { [key: string]: string | string[] | undefined } }) {
+export default function TermsPage({
+  searchParams,
+}: {
+  searchParams?: { [key: string]: string | string[] | undefined };
+}) {
   const raw = searchParams?.lang ?? "fr";
   const lang = (Array.isArray(raw) ? raw[0] : raw) as "fr" | "en" | "vi";
   const t = copy[lang] ?? copy.fr;
 
-  type Block = { type: "heading" | "paragraph" | "list" | "hr"; text?: string; items?: string[] };
+  type Block = {
+    type: "heading" | "paragraph" | "list" | "hr";
+    text?: string;
+    items?: string[];
+  };
   const headingLabels = new Set<string>([
     // EN
-    "1. Terms of Use", "2. Disclaimer", "3. Risk Notice", "4. Privacy Policy", "5. Contact",
+    "1. Terms of Use",
+    "2. Disclaimer",
+    "3. Risk Notice",
+    "4. Privacy Policy",
+    "5. Contact",
     // FR
-    "1. Conditions d’utilisation", "2. Avertissement / Disclaimer", "3. Avertissement sur les risques", "4. Confidentialité", "5. Contact",
+    "1. Conditions d’utilisation",
+    "2. Avertissement / Disclaimer",
+    "3. Avertissement sur les risques",
+    "4. Confidentialité",
+    "5. Contact",
     // VI
-    "1. Điều khoản sử dụng", "2. Tuyên bố miễn trừ trách nhiệm", "3. Cảnh báo rủi ro", "4. Quyền riêng tư", "5. Liên hệ",
+    "1. Điều khoản sử dụng",
+    "2. Tuyên bố miễn trừ trách nhiệm",
+    "3. Cảnh báo rủi ro",
+    "4. Quyền riêng tư",
+    "5. Liên hệ",
   ]);
 
   function parseBodyToBlocks(lines: string[]): Block[] {
@@ -164,16 +185,44 @@ export default function TermsPage({ searchParams }: { searchParams?: { [key: str
       <div className="mt-0 space-y-6 text-sm sm:text-base text-muted-foreground">
         <div className="flex items-center gap-2 text-xs">
           <span>Lang:</span>
-          <Link href={`?lang=fr`} className={`underline underline-offset-4 ${lang === "fr" ? "text-foreground" : ""}`}>FR</Link>
+          <Link
+            href={`?lang=fr`}
+            className={`underline underline-offset-4 ${
+              lang === "fr" ? "text-foreground" : ""
+            }`}
+          >
+            FR
+          </Link>
           <span>·</span>
-          <Link href={`?lang=en`} className={`underline underline-offset-4 ${lang === "en" ? "text-foreground" : ""}`}>EN</Link>
+          <Link
+            href={`?lang=en`}
+            className={`underline underline-offset-4 ${
+              lang === "en" ? "text-foreground" : ""
+            }`}
+          >
+            EN
+          </Link>
           <span>·</span>
-          <Link href={`?lang=vi`} className={`underline underline-offset-4 ${lang === "vi" ? "text-foreground" : ""}`}>VI</Link>
+          <Link
+            href={`?lang=vi`}
+            className={`underline underline-offset-4 ${
+              lang === "vi" ? "text-foreground" : ""
+            }`}
+          >
+            VI
+          </Link>
         </div>
-        <h1 className="text-xl sm:text-2xl font-semibold text-foreground">{t.title}</h1>
-        {blocks.map((b, i) => (
+        <h1 className="text-xl sm:text-2xl font-semibold text-foreground">
+          {t.title}
+        </h1>
+        {blocks.map((b, i) =>
           b.type === "heading" ? (
-            <h2 key={i} className="text-base sm:text-lg font-medium text-foreground mt-6">{b.text}</h2>
+            <h2
+              key={i}
+              className="text-base sm:text-lg font-medium text-foreground mt-6"
+            >
+              {b.text}
+            </h2>
           ) : b.type === "list" ? (
             <ul key={i} className="list-disc pl-5 space-y-1">
               {(b.items ?? []).map((item, j) => (
@@ -185,13 +234,13 @@ export default function TermsPage({ searchParams }: { searchParams?: { [key: str
           ) : (
             <p key={i}>{b.text}</p>
           )
-        ))}
+        )}
         <div className="pt-6">
-          <Link href="/" className="text-sm underline underline-offset-4">{t.back}</Link>
+          <Link href="/" className="text-sm underline underline-offset-4">
+            {t.back}
+          </Link>
         </div>
       </div>
     </main>
   );
 }
-
-

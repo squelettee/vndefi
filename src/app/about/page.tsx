@@ -37,7 +37,7 @@ const copy: Record<string, { title: string; body: string[]; back: string }> = {
       "Participer",
       "Voyageur, commerçant ou bâtisseur de l’écosystème, nous serions ravis d’échanger.",
       "Nous sommes ouverts à collaborer avec des locaux, commerçants et fournisseurs de wallets partageant notre mission : rendre les paiements crypto pratiques et accessibles au Vietnam.",
-      "📧 Contact : contact@vndefi.asia",
+      "📧 Contact : baptiste.gresse@proton.me",
     ],
     back: "← Retour à l’accueil",
   },
@@ -71,7 +71,7 @@ const copy: Record<string, { title: string; body: string[]; back: string }> = {
       "Get Involved",
       "Whether you’re a traveler, shop owner, or builder in the crypto space, we’d love to connect.",
       "We’re always open to collaborating with locals, merchants, and wallet providers who share our mission to make crypto payments practical and accessible in Vietnam.",
-      "📧 Contact us: contact@vndefi.asia",
+      "📧 Contact us: baptiste.gresse@proton.me",
     ],
     back: "← Back to home",
   },
@@ -105,25 +105,45 @@ const copy: Record<string, { title: string; body: string[]; back: string }> = {
       "Tham gia",
       "Dù là du khách, chủ cửa hàng hay người xây dựng trong lĩnh vực crypto, chúng tôi rất mong được kết nối.",
       "Chúng tôi luôn sẵn sàng hợp tác với cộng đồng địa phương, cửa hàng và nhà cung cấp ví có chung mục tiêu: biến thanh toán crypto trở nên thực tế và dễ tiếp cận tại Việt Nam.",
-      "📧 Liên hệ: contact@vndefi.asia",
+      "📧 Liên hệ: baptiste.gresse@proton.me",
     ],
     back: "← Quay về trang chủ",
   },
 };
 
-export default function AboutPage({ searchParams }: { searchParams?: { [key: string]: string | string[] | undefined } }) {
+export default function AboutPage({
+  searchParams,
+}: {
+  searchParams?: { [key: string]: string | string[] | undefined };
+}) {
   const raw = searchParams?.lang ?? "fr";
   const lang = (Array.isArray(raw) ? raw[0] : raw) as "fr" | "en" | "vi";
   const t = copy[lang] ?? copy.fr;
 
-  type Block = { type: "heading" | "paragraph" | "list"; text?: string; items?: string[] };
+  type Block = {
+    type: "heading" | "paragraph" | "list";
+    text?: string;
+    items?: string[];
+  };
   const headingLabels = new Set<string>([
     // EN
-    "About VNDeFi", "Our Vision", "What We Do", "What We Don’t Do", "Get Involved",
+    "About VNDeFi",
+    "Our Vision",
+    "What We Do",
+    "What We Don’t Do",
+    "Get Involved",
     // FR
-    "À propos de VNDeFi", "Notre vision", "Ce que nous faisons", "Ce que nous ne faisons pas", "Participer",
+    "À propos de VNDeFi",
+    "Notre vision",
+    "Ce que nous faisons",
+    "Ce que nous ne faisons pas",
+    "Participer",
     // VI
-    "Giới thiệu VNDeFi", "Tầm nhìn", "Chúng tôi làm gì", "Chúng tôi không làm gì", "Tham gia",
+    "Giới thiệu VNDeFi",
+    "Tầm nhìn",
+    "Chúng tôi làm gì",
+    "Chúng tôi không làm gì",
+    "Tham gia",
   ]);
 
   function parseBodyToBlocks(lines: string[]): Block[] {
@@ -165,16 +185,44 @@ export default function AboutPage({ searchParams }: { searchParams?: { [key: str
       <div className="mt-0 space-y-6 text-sm sm:text-base text-muted-foreground">
         <div className="flex items-center gap-2 text-xs">
           <span>Lang:</span>
-          <Link href={`?lang=fr`} className={`underline underline-offset-4 ${lang === "fr" ? "text-foreground" : ""}`}>FR</Link>
+          <Link
+            href={`?lang=fr`}
+            className={`underline underline-offset-4 ${
+              lang === "fr" ? "text-foreground" : ""
+            }`}
+          >
+            FR
+          </Link>
           <span>·</span>
-          <Link href={`?lang=en`} className={`underline underline-offset-4 ${lang === "en" ? "text-foreground" : ""}`}>EN</Link>
+          <Link
+            href={`?lang=en`}
+            className={`underline underline-offset-4 ${
+              lang === "en" ? "text-foreground" : ""
+            }`}
+          >
+            EN
+          </Link>
           <span>·</span>
-          <Link href={`?lang=vi`} className={`underline underline-offset-4 ${lang === "vi" ? "text-foreground" : ""}`}>VI</Link>
+          <Link
+            href={`?lang=vi`}
+            className={`underline underline-offset-4 ${
+              lang === "vi" ? "text-foreground" : ""
+            }`}
+          >
+            VI
+          </Link>
         </div>
-        <h1 className="text-xl sm:text-2xl font-semibold text-foreground">{t.title}</h1>
-        {blocks.map((b, i) => (
+        <h1 className="text-xl sm:text-2xl font-semibold text-foreground">
+          {t.title}
+        </h1>
+        {blocks.map((b, i) =>
           b.type === "heading" ? (
-            <h2 key={i} className="text-base sm:text-lg font-medium text-foreground mt-6">{b.text}</h2>
+            <h2
+              key={i}
+              className="text-base sm:text-lg font-medium text-foreground mt-6"
+            >
+              {b.text}
+            </h2>
           ) : b.type === "list" ? (
             <ul key={i} className="list-disc pl-5 space-y-1">
               {(b.items ?? []).map((item, j) => (
@@ -184,13 +232,13 @@ export default function AboutPage({ searchParams }: { searchParams?: { [key: str
           ) : (
             <p key={i}>{b.text}</p>
           )
-        ))}
+        )}
         <div className="pt-6">
-          <Link href="/" className="text-sm underline underline-offset-4">{t.back}</Link>
+          <Link href="/" className="text-sm underline underline-offset-4">
+            {t.back}
+          </Link>
         </div>
       </div>
     </main>
   );
 }
-
-
