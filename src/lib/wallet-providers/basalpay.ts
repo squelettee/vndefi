@@ -9,7 +9,7 @@ export const basalpayConfig: WalletProviderConfig = {
     "https://play.google.com/store/apps/details?id=com.basalpay.app&pcampaignid=web_share",
   learnMoreUrl: "https://basalpay.com/",
   logoUrl: undefined,
-  videoUrl: "/video_demo.mp4",
+  videoUrl: "/video_demo.mp",
   translations: {
     en: {
       description:
@@ -60,7 +60,8 @@ export const basalpayConfig: WalletProviderConfig = {
       },
       steps: {
         s1Title: "Téléchargez un portefeuille compatible.",
-        s1Desc: "Obtenez Basal Pay (iOS / Android) et ajoutez des fonds en USDT.",
+        s1Desc:
+          "Obtenez Basal Pay (iOS / Android) et ajoutez des fonds en USDT.",
         s2Title: "Scannez le QR bancaire du commerce (VietQR).",
         s2Desc:
           "La plupart des commerces vietnamiens l'utilisent déjà — aucun système spécial nécessaire.",
@@ -91,7 +92,8 @@ export const basalpayConfig: WalletProviderConfig = {
         s1Title: "Tải một ví được hỗ trợ.",
         s1Desc: "Tải Basal Pay (iOS / Android) và nạp USDT.",
         s2Title: "Quét mã QR ngân hàng của cửa hàng (VietQR).",
-        s2Desc: "Hầu hết cửa hàng Việt Nam đã dùng — không cần hệ thống đặc biệt.",
+        s2Desc:
+          "Hầu hết cửa hàng Việt Nam đã dùng — không cần hệ thống đặc biệt.",
         s3Title: "Nhập số tiền VND và xác nhận.",
         s3Desc:
           "Ví của bạn tự động quy đổi USDT, và người bán nhận VND ngay lập tức.",

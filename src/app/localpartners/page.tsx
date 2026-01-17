@@ -1,9 +1,25 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card, CardContent } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,7 +29,8 @@ import { ContactDialog } from "./parts/ContactDialog";
 
 export const metadata: Metadata = {
   title: "Local Partners",
-  description: "Partner with VNDeFi and attract tourists & expats with crypto payments.",
+  description:
+    "Partner with VNDeFi and attract tourists & expats with crypto payments.",
 };
 
 type Copy = {
@@ -76,7 +93,8 @@ const copy: Record<string, Copy> = {
     emailLabel: "Email",
     whatsappLabel: "WhatsApp / Zalo",
     dialogConsent: "I’d like to receive a free VNDeFi QR display for my shop.",
-    contactNote: "You’ll receive a quarterly update with insights on crypto-paying customers, affiliated wallet activity, and potential future rewards (if available).",
+    contactNote:
+      "You’ll receive a quarterly update with insights on crypto-paying customers, affiliated wallet activity, and potential future rewards (if available).",
     contactSubmit: "Register as a Partner",
     whatTitle: "What is VNDeFi?",
     whatBody: [
@@ -84,7 +102,8 @@ const copy: Record<string, Copy> = {
       "Many travelers, expats, and digital nomads use crypto for daily spending in Vietnam.",
       "If your business already uses a national bank QR code such as VietQR, you can receive VND from crypto users through the same system. We simply make that easy, clear, and visible.",
     ],
-    whatEmphasis: "We don’t touch your payments. We just help the right people find you.",
+    whatEmphasis:
+      "We don’t touch your payments. We just help the right people find you.",
     whyTitle: "Why Partner with VNDeFi",
     whyBullets: [
       "Free visibility — your shop appears on VNDeFi and social pages visited by crypto‑using travelers and expats.",
@@ -136,8 +155,10 @@ const copy: Record<string, Copy> = {
     addressLabel: "Adresse de l’établissement",
     emailLabel: "Email",
     whatsappLabel: "WhatsApp / Zalo",
-    dialogConsent: "Je souhaite recevoir gratuitement un présentoir QR VNDeFi pour mon établissement.",
-    contactNote: "Vous recevrez un point trimestriel : clients payant en crypto, activité des portefeuilles affiliés et d’éventuelles futures récompenses (si disponibles).",
+    dialogConsent:
+      "Je souhaite recevoir gratuitement un présentoir QR VNDeFi pour mon établissement.",
+    contactNote:
+      "Vous recevrez un point trimestriel : clients payant en crypto, activité des portefeuilles affiliés et d’éventuelles futures récompenses (si disponibles).",
     contactSubmit: "S’inscrire comme partenaire",
     whatTitle: "Qu’est‑ce que VNDeFi ?",
     whatBody: [
@@ -145,7 +166,8 @@ const copy: Record<string, Copy> = {
       "De nombreux voyageurs, expatriés et nomades digitaux utilisent la crypto au quotidien au Vietnam.",
       "Si votre commerce utilise déjà un QR bancaire national (VietQR, par exemple), vous pouvez recevoir des paiements en VND de la part d’utilisateurs crypto via le même système. Nous rendons cela simple, clair et visible.",
     ],
-    whatEmphasis: "Nous ne touchons pas à vos paiements. Nous aidons simplement les bonnes personnes à vous trouver.",
+    whatEmphasis:
+      "Nous ne touchons pas à vos paiements. Nous aidons simplement les bonnes personnes à vous trouver.",
     whyTitle: "Pourquoi devenir partenaire VNDeFi",
     whyBullets: [
       "Visibilité gratuite — votre établissement apparaît sur le site VNDeFi et nos réseaux consultés par les voyageurs et expats utilisateurs de crypto.",
@@ -197,8 +219,10 @@ const copy: Record<string, Copy> = {
     addressLabel: "Địa chỉ cửa hàng",
     emailLabel: "Email",
     whatsappLabel: "WhatsApp / Zalo",
-    dialogConsent: "Tôi muốn nhận miễn phí kệ trưng bày QR VNDeFi cho cửa hàng.",
-    contactNote: "Bạn sẽ nhận cập nhật hàng quý: khách thanh toán bằng crypto, hoạt động ví affiliate và các phần thưởng tiềm năng (nếu có).",
+    dialogConsent:
+      "Tôi muốn nhận miễn phí kệ trưng bày QR VNDeFi cho cửa hàng.",
+    contactNote:
+      "Bạn sẽ nhận cập nhật hàng quý: khách thanh toán bằng crypto, hoạt động ví affiliate và các phần thưởng tiềm năng (nếu có).",
     contactSubmit: "Đăng ký làm đối tác",
     whatTitle: "VNDeFi là gì?",
     whatBody: [
@@ -206,7 +230,8 @@ const copy: Record<string, Copy> = {
       "Nhiều khách du lịch, người nước ngoài và nomad dùng crypto để chi tiêu hàng ngày ở Việt Nam.",
       "Nếu cửa hàng của bạn đã dùng QR ngân hàng quốc gia như VietQR, bạn có thể nhận VND từ người dùng crypto qua chính hệ thống đó. Chúng tôi chỉ giúp việc này trở nên dễ hiểu và hiển thị rõ ràng.",
     ],
-    whatEmphasis: "Chúng tôi không can thiệp vào dòng tiền của bạn. Chỉ giúp khách phù hợp tìm thấy bạn.",
+    whatEmphasis:
+      "Chúng tôi không can thiệp vào dòng tiền của bạn. Chỉ giúp khách phù hợp tìm thấy bạn.",
     whyTitle: "Vì sao hợp tác với VNDeFi",
     whyBullets: [
       "Hiển thị miễn phí — cửa hàng xuất hiện trên website VNDeFi và mạng xã hội được khách dùng crypto ghé thăm.",
@@ -230,7 +255,11 @@ const copy: Record<string, Copy> = {
   },
 };
 
-function Content({ params }: { params?: { [key: string]: string | string[] | undefined } }) {
+function Content({
+  params,
+}: {
+  params?: { [key: string]: string | string[] | undefined };
+}) {
   const raw = params?.lang ?? "fr";
   const lang = (Array.isArray(raw) ? raw[0] : raw) as "fr" | "en" | "vi";
   const t = copy[lang] ?? copy.fr;
@@ -242,19 +271,42 @@ function Content({ params }: { params?: { [key: string]: string | string[] | und
       <div className="mt-0 space-y-8 text-sm sm:text-base text-muted-foreground">
         <div className="flex items-center gap-2 text-xs">
           <span>Lang:</span>
-          <Link href={`?lang=fr`} className={`underline underline-offset-4 ${lang === "fr" ? "text-foreground" : ""}`}>FR</Link>
+          <Link
+            href={`?lang=fr`}
+            className={`underline underline-offset-4 ${
+              lang === "fr" ? "text-foreground" : ""
+            }`}
+          >
+            FR
+          </Link>
           <span>·</span>
-          <Link href={`?lang=en`} className={`underline underline-offset-4 ${lang === "en" ? "text-foreground" : ""}`}>EN</Link>
+          <Link
+            href={`?lang=en`}
+            className={`underline underline-offset-4 ${
+              lang === "en" ? "text-foreground" : ""
+            }`}
+          >
+            EN
+          </Link>
           <span>·</span>
-          <Link href={`?lang=vi`} className={`underline underline-offset-4 ${lang === "vi" ? "text-foreground" : ""}`}>VI</Link>
+          <Link
+            href={`?lang=vi`}
+            className={`underline underline-offset-4 ${
+              lang === "vi" ? "text-foreground" : ""
+            }`}
+          >
+            VI
+          </Link>
         </div>
 
         <section className="overflow-hidden rounded-xl border border-border/60 bg-gradient-to-b from-background to-muted/30 p-6">
           <div className="flex items-start justify-between gap-4">
             <div className="space-y-2">
-              <h1 className="text-2xl sm:text-3xl font-semibold text-foreground">{t.title}</h1>
+              <h1 className="text-2xl sm:text-3xl font-semibold text-foreground">
+                {t.title}
+              </h1>
               {t.topBody.map((p, i) => (
-                <p key={i}>{i === 0 ? (<strong>{p}</strong>) : p}</p>
+                <p key={i}>{i === 0 ? <strong>{p}</strong> : p}</p>
               ))}
               <div className="pt-3">
                 <ContactDialog
@@ -275,42 +327,75 @@ function Content({ params }: { params?: { [key: string]: string | string[] | und
         </section>
 
         <section className="space-y-2">
-          <h2 className="text-base sm:text-lg font-medium text-foreground">{t.whatTitle}</h2>
-          {t.whatBody.map((p, i) => (<p key={i}>{p}</p>))}
-          <p><strong>{t.whatEmphasis}</strong></p>
+          <h2 className="text-base sm:text-lg font-medium text-foreground">
+            {t.whatTitle}
+          </h2>
+          {t.whatBody.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+          <p>
+            <strong>{t.whatEmphasis}</strong>
+          </p>
         </section>
 
         <section className="space-y-3">
-          <h2 className="text-base sm:text-lg font-medium text-foreground">{t.howTitle}</h2>
+          <h2 className="text-base sm:text-lg font-medium text-foreground">
+            {t.howTitle}
+          </h2>
 
           <Carousel className="w-full mt-4">
             <CarouselContent className="-mx-2">
               {t.stepsTitles.map((title, i) => (
-                <CarouselItem key={i} className="px-2 basis-3/4 sm:basis-2/5 md:basis-1/3 lg:basis-1/5">
+                <CarouselItem
+                  key={i}
+                  className="px-2 basis-3/4 sm:basis-2/5 md:basis-1/3 lg:basis-1/5"
+                >
                   <AspectRatio ratio={4 / 5}>
                     <Card className="h-full">
                       <CardContent className="p-3 h-full flex flex-col">
-                        <div className="h-7 w-7 shrink-0 rounded-full bg-primary/10 text-primary flex items-center justify-center font-medium">{i + 1}</div>
-                        <p className="mt-2 font-medium text-foreground">{title}</p>
-                        <p className="mt-1 text-xs text-muted-foreground">{t.stepsBodies[i]}</p>
+                        <div className="h-7 w-7 shrink-0 rounded-full bg-primary/10 text-primary flex items-center justify-center font-medium">
+                          {i + 1}
+                        </div>
+                        <p className="mt-2 font-medium text-foreground">
+                          {title}
+                        </p>
+                        <p className="mt-1 text-xs text-muted-foreground">
+                          {t.stepsBodies[i]}
+                        </p>
                         <div className="mt-auto space-y-2">
                           {i === 2 ? (
                             <div className="pt-1 text-xs">
-                              <Link href="/" className="underline underline-offset-4">{t.guideLabel}</Link>
+                              <Link
+                                href="/"
+                                className="underline underline-offset-4"
+                              >
+                                {t.guideLabel}
+                              </Link>
                             </div>
                           ) : null}
                           {i === 1 ? (
                             <Dialog>
                               <DialogTrigger asChild>
-                                <button type="button" className="text-xs underline underline-offset-4 text-foreground/80 hover:text-foreground">
+                                <button
+                                  type="button"
+                                  className="text-xs underline underline-offset-4 text-foreground/80 hover:text-foreground"
+                                >
                                   {t.flyerPreviewLabel}
                                 </button>
                               </DialogTrigger>
                               <DialogContent className="max-w-3xl p-0">
-                                <DialogTitle className="sr-only">{t.flyerPreviewLabel}</DialogTitle>
+                                <DialogTitle className="sr-only">
+                                  {t.flyerPreviewLabel}
+                                </DialogTitle>
                                 <AspectRatio ratio={4 / 3}>
                                   <div className="relative h-full w-full">
-                                    <Image src="/qrcode.svg" alt={t.flyerPreviewLabel} fill className="object-contain" sizes="(max-width: 768px) 90vw, 768px" />
+                                    <Image
+                                      src="/qrcode.svg"
+                                      alt={t.flyerPreviewLabel}
+                                      fill
+                                      className="object-contain"
+                                      sizes="(max-width: 768px) 90vw, 768px"
+                                    />
                                   </div>
                                 </AspectRatio>
                               </DialogContent>
@@ -319,14 +404,24 @@ function Content({ params }: { params?: { [key: string]: string | string[] | und
                           {i === 3 ? (
                             <Dialog>
                               <DialogTrigger asChild>
-                                <button type="button" className="text-xs underline underline-offset-4 text-foreground/80 hover:text-foreground">
+                                <button
+                                  type="button"
+                                  className="text-xs underline underline-offset-4 text-foreground/80 hover:text-foreground"
+                                >
                                   {videoTitle}
                                 </button>
                               </DialogTrigger>
                               <DialogContent className="max-w-4xl p-0">
-                                <DialogTitle className="sr-only">{videoTitle}</DialogTitle>
+                                <DialogTitle className="sr-only">
+                                  {videoTitle}
+                                </DialogTitle>
                                 <AspectRatio ratio={16 / 9}>
-                                  <video src="/video_demo.mp4" controls playsInline className="h-full w-full object-cover" />
+                                  <video
+                                    src="/video_demo.mp"
+                                    controls
+                                    playsInline
+                                    className="h-full w-full object-cover"
+                                  />
                                 </AspectRatio>
                               </DialogContent>
                             </Dialog>
@@ -344,14 +439,20 @@ function Content({ params }: { params?: { [key: string]: string | string[] | und
         </section>
 
         <section className="space-y-2">
-          <h2 className="text-base sm:text-lg font-medium text-foreground">{t.whyTitle}</h2>
+          <h2 className="text-base sm:text-lg font-medium text-foreground">
+            {t.whyTitle}
+          </h2>
           <ul className="list-disc pl-5 space-y-1">
-            {t.whyBullets.map((b, i) => (<li key={i}>{b}</li>))}
+            {t.whyBullets.map((b, i) => (
+              <li key={i}>{b}</li>
+            ))}
           </ul>
         </section>
 
         <section className="space-y-3">
-          <h2 className="text-base sm:text-lg font-medium text-foreground">{t.faqTitle}</h2>
+          <h2 className="text-base sm:text-lg font-medium text-foreground">
+            {t.faqTitle}
+          </h2>
           <Accordion type="single" collapsible>
             {t.faqQuestions.map((q, i) => (
               <AccordionItem key={i} value={`item-${i}`}>
@@ -363,14 +464,20 @@ function Content({ params }: { params?: { [key: string]: string | string[] | und
         </section>
 
         <div className="pt-6">
-          <Link href="/" className="text-sm underline underline-offset-4">{t.back}</Link>
+          <Link href="/" className="text-sm underline underline-offset-4">
+            {t.back}
+          </Link>
         </div>
       </div>
     </main>
   );
 }
 
-export default async function LocalPartnersPage({ searchParams }: { searchParams?: Promise<{ [key: string]: string | string[] | undefined }> }) {
+export default async function LocalPartnersPage({
+  searchParams,
+}: {
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
   const params = searchParams ? await searchParams : undefined;
   return (
     <Suspense>
